@@ -5,6 +5,7 @@ import '../../shared/widgets/social_login/social_login_button.dart';
 import '../../shared/themes/app_colors.dart';
 import '../../shared/themes/app_images.dart';
 import '../../shared/themes/app_text_style.dart';
+import 'login_controller.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({Key? key}) : super(key: key);
@@ -14,10 +15,10 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  final controller = LoginController();
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-
     return Scaffold(
       backgroundColor: AppColors.background,
       body: Container(
@@ -64,17 +65,7 @@ class _LoginPageState extends State<LoginPage> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 40),
                     child: SocialLoginButton(
-                      onTap: () async {
-                        GoogleSignIn _googleSignIn = GoogleSignIn(
-                          scopes: ['email'],
-                        );
-                        try {
-                          final response = await _googleSignIn.signIn();
-                          print(response);
-                        } catch (error) {
-                          print(error);
-                        }
-                      },
+                      onTap: controller.googleSignIn,
                     ),
                   ),
                 ],
