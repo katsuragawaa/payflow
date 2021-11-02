@@ -19,5 +19,5 @@ class UserModel {
         'photoUrl': photoUrl,
       };
 
-  String toJson() => jsonEncode(toMap);
+  String toJson() => jsonEncode(toMap());
 }
