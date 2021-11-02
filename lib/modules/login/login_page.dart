@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 
 import '../../shared/widgets/social_login/social_login_button.dart';
 import '../../shared/themes/app_colors.dart';
