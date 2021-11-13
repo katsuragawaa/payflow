@@ -31,7 +31,7 @@ class _LoginPageState extends State<LoginPage> {
               color: AppColors.primary,
             ),
             Positioned(
-              top: 70,
+              top: size.height * 0.09,
               left: 0,
               right: 0,
               child: Image.asset(
@@ -40,7 +40,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             Positioned(
-              top: 70 + size.height * 0.45 + 25,
+              top: size.height * 0.09 + size.height * 0.45 + 25,
               left: 0,
               right: 0,
               child: Column(
@@ -53,7 +53,7 @@ class _LoginPageState extends State<LoginPage> {
                       right: 70,
                       left: 70,
                       top: 25,
-                      bottom: 40,
+                      bottom: 25,
                     ),
                     child: Text(
                       'Organize seus boletos em um só lugar',

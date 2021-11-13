@@ -6,6 +6,7 @@ import 'modules/splash/splash_page.dart';
 import 'shared/themes/app_colors.dart';
 import 'modules/home/home_page.dart';
 import 'modules/barcode_scanner/barcode_scanner_page.dart';
+import 'modules/insert_bill/insert_bill_page.dart';
 
 class AppWidget extends StatelessWidget {
   AppWidget() {
@@ -29,6 +30,7 @@ class AppWidget extends StatelessWidget {
         '/login': (context) => LoginPage(),
         '/home': (context) => HomePage(),
         '/barcode_scanner': (context) => BarcodeScannerPage(),
+        '/insert_bill': (context) => InsertBillPage(),
       },
     );
   }
